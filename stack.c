@@ -26,6 +26,11 @@ int pop() {
         return popped;
     }
 }
+void display(){
+for(int i=top;i>=0;i--){
+    printf("%d \n",stack[i]);
+}
+}
 
 int main() {
     int choice, value;
@@ -34,7 +39,8 @@ int main() {
         printf("\nStack Operations Menu:\n");
         printf("1. Push\n");
         printf("2. Pop\n");
-        printf("3. Exit\n");
+        printf("3. Display\n");
+        printf("4. Exit\n");
         printf("Enter your choice: ");
         scanf("%d", &choice);
 
@@ -51,8 +57,10 @@ int main() {
                     printf("Popped element: %d\n", value);
                 }
                 break;
-
             case 3:
+                display();
+                break;
+            case 4:
                 printf("Exiting program.\n");
                 return 0;
 
